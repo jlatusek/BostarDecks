@@ -5,7 +5,7 @@ CREATE TABLE if not exists deckFlashcard
     flashcard_id INTEGER NOT NULL,
     level_id     INTEGER NOT NULL,
     bad_answers  INTEGER DEFAULT 0,
-    good_answers DEFAULT 0,
+    good_answers INTEGER DEFAULT 0,
     PRIMARY KEY (id),
     FOREIGN KEY (deck_id)
         REFERENCES deck (id)
