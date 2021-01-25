@@ -1,4 +1,7 @@
 [requires]
+sqlite3/3.34.0
+boost/1.75.0
+gtest/1.10.0
 
 [generators]
 cmake
