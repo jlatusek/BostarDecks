@@ -5,5 +5,5 @@ CREATE TABLE if not exists flashcard
     averse  TEXT,
     reverse TEXT,
     tip     TEXT,
-    FOREIGN KEY (id)
+    PRIMARY KEY (id)
 )
