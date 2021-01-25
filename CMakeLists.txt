@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.19)
 
-project(BostarDecks LANGUAGES CXX)
+project(bostardecks LANGUAGES CXX)
+set(LIB_NAME ${PROJECT_NAME}_lib)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -12,19 +13,7 @@ set(CMAKE_C_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+conan_basic_setup(TARGETS)
 
-set(HEADERS
-    )
-
-set(SOURCES
-        src/main.cpp
-    )
-
-add_executable(${PROJECT_NAME}
-        ${SOURCES}
-        ${HEADERS}
-)
-
-target_include_directories(${PROJECT_NAME} PRIVATE inc)
-target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+add_subdirectory(src)
+add_subdirectory(test)
