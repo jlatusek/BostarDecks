@@ -9,4 +9,4 @@ pushd build
 
 conan install ..
 cmake .. -DCMAKE_BUILD_TYPE=Debug
-cmake --build .
+cmake --build . -j8
