@@ -75,3 +75,4 @@ build
 /.clang-format
 
 .idea
+/Pipfile.lock
