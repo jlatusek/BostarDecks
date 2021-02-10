@@ -1,13 +1,13 @@
 set(LIB_NAME ${PROJECT_NAME}_lib)
 
 set(HEADERS
-        inc/Database.h
+        db/database.h
         inc/logger.h
         )
 
 set(SOURCES
-        Database.cpp
-        Model.cpp
+        db/database.cpp
+        db/model.cpp
         )
 
 add_library(${LIB_NAME} STATIC
@@ -15,7 +15,10 @@ add_library(${LIB_NAME} STATIC
         ${HEADERS}
         )
 
-target_include_directories(${LIB_NAME} PUBLIC inc)
+target_include_directories(${LIB_NAME} PUBLIC
+        ${CMAKE_SOURCE_DIR}/inc
+        ${CMAKE_SOURCE_DIR}/src/db
+        )
 conan_target_link_libraries(${LIB_NAME}
         CONAN_PKG::boost
         )
