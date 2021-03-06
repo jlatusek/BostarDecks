@@ -72,7 +72,6 @@ Thumbs.db
 *.exe
 build
 
-/.clang-format
 
 .idea
 /Pipfile.lock
