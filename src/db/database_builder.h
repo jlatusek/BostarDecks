@@ -13,13 +13,13 @@ public:
   explicit DatabaseBuilder(Poco::Data::Session& session);
   ~DatabaseBuilder();
   void createTables();
+private:
   void createDeckTable();
   void createDeckFlashcardTable();
   void createFlashcardTable();
   void createLevelTable();
   void createInfoTable();
 
-private:
   Poco::Data::Session& session;
 };
 
