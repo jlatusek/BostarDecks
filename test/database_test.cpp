@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "database.h"
+#include "db/database.h"
 #include <iostream>
 
 TEST(Database, OpenDatabase)

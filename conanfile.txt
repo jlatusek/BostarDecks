@@ -1,7 +1,9 @@
 [requires]
 sqlite3/3.34.0
+Poco/1.10.1@pocoproject/stable
 boost/1.75.0
 gtest/1.10.0
+zlib/1.2.11@conan/stable
 
 [generators]
 cmake
