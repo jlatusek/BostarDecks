@@ -77,3 +77,4 @@ build
 /Pipfile.lock
 __pycache__
 *.db
+.mypy_cache
