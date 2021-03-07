@@ -9,13 +9,6 @@ using namespace Poco::Data::Keywords;
 using Poco::Data::Session;
 using Poco::Data::Statement;
 
-struct Person
-{
-  std::string name;
-  std::string address;
-  int age;
-};
-
 int
 main(int argc, char** argv)
 {
