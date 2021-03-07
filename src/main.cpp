@@ -20,6 +20,11 @@ main(int argc, char** argv)
 
   db::DatabaseBuilder dbBuilder(session);
   dbBuilder.createTables();
+  model::Deck deck("name", "description", "tag", true, 5);
+
+  Statement insert(session);
+  insert << "INSERT INTO deck VALUES(?, ?, ?, ?, ?)", use(deck), now;
+  insert.execute();
 
   return 0;
 }
