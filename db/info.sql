@@ -1,4 +1,4 @@
-CREATE TABLE if not exists deck
+CREATE TABLE if not exists info
 (
     id          INTEGER NOT NULL,
     name        TEXT    NOT NULL,

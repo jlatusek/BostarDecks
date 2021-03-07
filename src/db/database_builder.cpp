@@ -128,7 +128,7 @@ DatabaseBuilder::createInfoTable()
       from read_file import *
       read_file_as_string("../../db/info.sql")
       ]]] */
-    "CREATE TABLE if not exists deck"
+    "CREATE TABLE if not exists info"
     "("
     "    id          INTEGER NOT NULL,"
     "    name        TEXT    NOT NULL,"
