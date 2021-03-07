@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 #include "Poco/Data/AbstractBinder.h"
@@ -5,32 +6,19 @@
 #include "Poco/Data/TypeHandler.h"
 
 namespace model {
-class Deck
+struct Deck
 {
 public:
+  Deck() = default;
   Deck(std::string name,
        std::string description,
        std::string tag,
        bool public_ = true,
        int id = 0);
-  int getId() const;
-  void setId(int id);
-  void setName(std::string name);
-  void setDescription(std::string description);
-  void setOwnerId(int ownerId);
-  void setPublic(bool public_);
-  void setTag(std::string tag);
-  std::string getName() const;
-  std::string getDescription() const;
-  int getOwnerId() const;
-  bool isPublic() const;
-  std::string getTag() const;
-
-private:
   int id = 0;
   std::string name;
   std::string description;
-  bool public_ = true;
+  bool is_public = true;
   std::string tag;
 };
 }
